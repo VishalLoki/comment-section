@@ -141,8 +141,11 @@
         </form>
     </div>
 
-    <div class="container comment-section" id="Comments">
+    <div class="container" id="Comments">
         <div id="heading">Community Comments</div>
+        <div class="comment-section">
+
+        </div>
     </div>
 
     <script>
@@ -185,16 +188,16 @@
                 resetForm();
             });
             const studarr = [
-                { name: "JK", comment: "Such a cringe, morden world ku vangalen da" },
-                { name: "Mr.Beast", comment: "I will donate 1 million dollars" },
-                { name: "MadanGowri", comment: "MG Squad , Koodiya viraivil itha paththi namma channel layum pesuvom!!" },
-                { name: "Plip Plip", comment: "Ipo Kachana movie roast panna poorom" },
-                { name: "Manichow", comment: "Neejamavee iluthutu oodiruven." },
-                { name: "GP Muthu", comment: "Ada enlee ipdi irukinga,seththa payaleee" },
-                { name: "Aarif MindVoice", comment: "Anaiku oru naalaiku naanum inga poirunthen" },
-                { name: "Parithanbangal", comment: "Comment la solliduven ,aana sensor la poirum" },
+                { name: "Hara hara mahadevaki", comment: "Adiyee sobana, unna na open na kekura kelvi onnee onnu than" }, 
                 { name: "KK Kalai", comment: "Aunty majava irukanga...." },
-                { name: "Hara hara mahadevaki", comment: "Adiyee sobana, unna na open na kekura kelvi onnee onnu than" },
+                { name: "Parithanbangal", comment: "Comment la solliduven ,aana sensor la poirum" },
+                { name: "Aarif MindVoice", comment: "Anaiku oru naalaiku naanum inga poirunthen" },
+                { name: "GP Muthu", comment: "Ada enlee ipdi irukinga,seththa payaleee" },
+                { name: "Manichow", comment: "Neejamavee iluthutu oodiruven." },
+                { name: "Plip Plip", comment: "Ipo Kachana movie roast panna poorom" },
+                { name: "MadanGowri", comment: "MG Squad , Koodiya viraivil itha paththi namma channel layum pesuvom!!" },
+                { name: "Mr.Beast", comment: "I will donate 1 million dollars" },
+                { name: "JK", comment: "Such a cringe, morden world ku vangalen da" },
             ];
 
             studarr.forEach(comment => {
@@ -205,7 +208,7 @@
                 var commentDiv = document.createElement('div');
                 commentDiv.classList.add('comment');
                 commentDiv.innerHTML = '<strong>' + username + ':</strong> ' + comment;
-                commentsContainer.appendChild(commentDiv);
+                commentsContainer.querySelector('.comment-section').insertBefore(commentDiv, commentsContainer.querySelector('.comment-section').firstChild);
             }
         });
     </script>
